@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# IDE / hệ điều hành
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Báo cáo và mã chỉ dùng để tạo báo cáo
+*.docx
+*.pdf
+create_word_report.py
+
+# File tạm
+*.tmp
+~$*

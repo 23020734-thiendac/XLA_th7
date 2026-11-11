@@ -1,0 +1,30 @@
+BÀI THỰC HÀNH SỐ 7 - LOGITECH C270
+
+File STL: D:\Xử lý ảnh - thị giác Robot\3d_pointcloud\week7\Logitech c270.stl
+
+Câu 1
+- Số tam giác: 4916
+- Số điểm trước loại trùng: 14748
+- Số điểm sau loại trùng: 2458
+
+Câu 2
+- z_min: -25.000000
+- z_max: 2.000000
+- z_mid: -11.500000
+- Số điểm giữ lại: 1921
+- Số điểm bị loại: 537
+
+Câu 3
+- Kích thước depth map: 64 x 64
+- Số pixel có dữ liệu: 1375
+
+Câu 4
+- Số trọng tâm thêm vào: 4916
+- Tổng số điểm sau bổ sung: 7374
+- Số pixel có dữ liệu mới: 2437
+- Số pixel tăng thêm: 1062
+
+NHẬN XÉT CÂU 4
+Sau khi thêm 4,916 trọng tâm tam giác, số pixel có dữ liệu tăng từ 1,375 lên 2,437, tức tăng 1,062 pixel (77.24% so với ban đầu).
+
+Các trọng tâm bổ sung mẫu ở phần giữa mỗi tam giác nên lấp được nhiều ô trống, đặc biệt ở vùng tròn quanh ống kính và trên thân camera kéo dài. Tuy nhiên, một tam giác chỉ được bổ sung một điểm tại trọng tâm. Tam giác lớn hoặc dài có thể phủ qua nhiều ô 64×64 nhưng vẫn chỉ đóng góp một mẫu mới; các điểm cũng phân bố không đều theo mật độ lưới tam giác. Vì vậy nhiều ô trên hình chiếu không chứa đỉnh hay trọng tâm nào và vẫn là NaN. Muốn bề mặt kín hơn cần lấy nhiều mẫu theo diện tích bên trong mỗi tam giác hoặc raster hóa toàn bộ tam giác, thay vì chỉ dùng đỉnh và một trọng tâm.
